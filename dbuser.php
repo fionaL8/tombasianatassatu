@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ITFUL Studio - Home User Page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/slick.css" />
+  <link href="css/tooplate-little-fashion.css" rel="stylesheet">
+
+  <style>
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .popup-content {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      min-width: 250px;
+    }
+    .popup-buttons {
+      margin-top: 20px;
+    }
+    .popup-buttons button {
+      margin: 0 10px;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="preloader">
+    <div class="spinner">
+      <span class="sk-inner-circle"></span>
+    </div>
+  </section>
+
+  <main>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="index.php">
+          <strong><span>ITFUL</span> Studio</strong>
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="dbuser.php">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reservation.php">Reservation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="gallery.php">Gallery</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ourpackage.php">Our Package</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.php">About</a>
+            </li>
+          </ul>
+        </div>
+
+        
+        <div class="d-none d-lg-block">
+          <a href="#" class="bi-person custom-icon me-3" onclick="showLogoutPopup(event)"></a>
+
+          <div id="logoutPopup" class="popup-overlay">
+            <div class="popup-content">
+              <p>Are you sure you want to logout?</p>
+              <div class="popup-buttons">
+                <button onclick="confirmLogout()">Yes</button>
+                <button onclick="closeLogoutPopup()">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="slick-slideshow">
+      <div class="slick-custom">
+        <img src="bg (2).png" class="img-fluid" alt="">
+        <div class="slick-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-10">
+                <h1 class="slick-title">ITFUL Studio, untuk momen tak terlupakan!</h1>
+                <p class="lead text-white mt-lg-3 mb-lg-5">Reservasi sekarang dan buat kenangan tak terlupakan!</p>
+                <a href="reservation.php" class="btn custom-btn">RESERVASI</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slick-custom">
+        <img src="bg (3).png" class="img-fluid" alt="">
+        <div class="slick-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-10">
+                <h1 class="slick-title">Mau foto kayak gimana?</h1>
+                <p class="lead text-white mt-lg-3 mb-lg-5">ITFUL Studio menyediakan banyak paket loh!</p>
+                <a href="ourpackage.php" class="btn custom-btn">LIHAT PAKET</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-10 me-auto mb-4">
+          <h4 class="text-white mb-3"><a href="index.html">ITFUL</a> Studio</h4>
+        </div>
+
+        <div class="col-lg-5 col-8">
+          <h5 class="text-white mb-3">Sitemap</h5>
+          <ul class="footer-menu d-flex flex-wrap">
+            <li class="footer-menu-item"><a href="reservation.php" class="footer-menu-link">Reservation</a></li>
+            <li class="footer-menu-item"><a href="ourpackage.php" class="footer-menu-link">Our Package</a></li>
+            <li class="footer-menu-item"><a href="about.php" class="footer-menu-link">About</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-4">
+          <h5 class="text-white mb-3">Social</h5>
+          <ul class="social-icon">
+            <li><a href="https://wa.me/+6283135492214/" class="social-icon-link bi-whatsapp"></a></li>
+            <li><a href="https://www.instagram.com/yeshintapr" class="social-icon-link bi-instagram"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript untuk Popup -->
+  <script>
+    function showLogoutPopup(event) {
+      event.preventDefault();
+      document.getElementById("logoutPopup").style.display = "flex";
+    }
+    function closeLogoutPopup() {
+      document.getElementById("logoutPopup").style.display = "none";
+    }
+    function confirmLogout() {
+      window.location.href = "index.php";
+    }
+  </script>
+
+  <!-- JAVASCRIPT FILES -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/Headroom.js"></script>
+  <script src="js/jQuery.headroom.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+</html>
